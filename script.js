@@ -21,7 +21,7 @@ function playRound(playerSelection, computerSelection) {
             winner = `Paper beats rock, you lose!`;
             break;
         case playerSelection === 'scissors' && computerSelection === 'paper':
-            winnner = `Scissors cut paper, you win!`;
+            winner = `Scissors cut paper, you win!`;
             break;
         case playerSelection === 'scissors' && computerSelection === 'rock':
             winner = `Rock beats scissors, you lose!`;
