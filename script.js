@@ -72,8 +72,15 @@ function endGame() {
 function playGame() {
     let playerSelection;
     choiceButtons.forEach((button) => {
-        button.addEventListener('click', (e) => {
-            playerSelection = e.target.value;
+        button.addEventListener('click', () => {
+            const choiceIcons = document.querySelectorAll('i');
+            if (button.classList.contains('rock-button')) {
+                playerSelection = 'rock';
+            } else if (button.classList.contains('paper-button')) {
+                playerSelection = 'paper';
+            } else if (button.classList.contains('scissors-button')) {
+                playerSelection = 'scissors';
+            }
             playRound(playerSelection, computerPlay());
             endGame(playerScore, computerScore);
             resetGame();

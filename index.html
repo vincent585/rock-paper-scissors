@@ -6,20 +6,29 @@
     <title>Rock, Paper, Scissors!</title>
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="container">
+        <h1>Rock, Paper, Scissors!</h1>
         <div id="results-container">
             <div id="player-score">Your Score: 0</div>
             <div id="computer-score">Computer Score: 0</div>
             <div id="round-result">Result: </div>
         </div>
         <div id="button-container">
-            <button class="option" value="rock">Rock</button>
-            <button class="option" value="paper">Paper</button>
-            <button class="option" value="scissors">Scissors</button>
-            <button id ="reset">Reset</button>
+            <button class="option rock-button" value="rock">
+                <i class="far fa-hand-rock rock-icon"></i>
+            </button>
+            <button class="option paper-button" value="paper">
+                <i class="far fa-hand-paper paper-icon"></i>
+            </button>
+            <button class="option scissors-button" value="scissors">
+                <i class="far fa-hand-scissors scissors-icon"></i>
+            </button>
         </div>
+        <button id ="reset">Reset</button>
     </div>
     
     <script src="script.js"></script>
