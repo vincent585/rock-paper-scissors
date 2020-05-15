@@ -16,40 +16,40 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
     switch(true) {
         case playerSelection === computerSelection:
-            roundResultDiv.textContent += `You both picked ${playerSelection}, it's a tie!`;
+            roundResultDiv.textContent = `Result: You both picked ${playerSelection}, it's a tie!`;
             break;
         case playerSelection === 'rock' && computerSelection === 'scissors':
-            roundResultDiv.textContent += `Rock beats scissors, you win!`;
+            roundResultDiv.textContent = `Result: Rock beats scissors, you win!`;
             playerScore++;
             playerScoreDiv.textContent = `Your Score: ${playerScore}`;
             break;
         case playerSelection === 'rock' && computerSelection === 'paper':
-            roundResultDiv.textContent += `Paper beats rock, you lose!`;
+            roundResultDiv.textContent = `Result: Paper beats rock, you lose!`;
             computerScore++;
             computerScoreDiv.textContent = `Computer Score: ${computerScore}`;
             break;
         case playerSelection === 'scissors' && computerSelection === 'paper':
-            roundResultDiv.textContent += `Scissors cut paper, you win!`;
+            roundResultDiv.textContent = `Result: Scissors cut paper, you win!`;
             playerScore++;
             playerScoreDiv.textContent = `Your Score: ${playerScore}`;
             break;
         case playerSelection === 'scissors' && computerSelection === 'rock':
-            roundResultDiv.textContent += `Rock beats scissors, you lose!`;
+            roundResultDiv.textContent = `Result: Rock beats scissors, you lose!`;
             computerScore++;
             computerScoreDiv.textContent = `Computer Score: ${computerScore}`;
             break;
         case playerSelection === 'paper' && computerSelection === 'rock':
-            roundResultDiv.textContent += `Paper beats rock, you win!`;
+            roundResultDiv.textContent = `Result: Paper beats rock, you win!`;
             playerScore++;
             playerScoreDiv.textContent = `Your Score: ${playerScore}`;
             break;
         case playerSelection === 'paper' && computerSelection === 'scissors':
-            roundResultDiv.textContent += `Scissors cut paper, you lose!`;
+            roundResultDiv.textContent = `Result: Scissors cut paper, you lose!`;
             computerScore++;
             computerScoreDiv.textContent = `Computer Score: ${computerScore}`;
             break;
         default:
-            roundResultDiv.textContent += 'Something went wrong...';
+            roundResultDiv.textContent = 'Something went wrong...';
     }
     return [playerScore, computerScore];
 }
